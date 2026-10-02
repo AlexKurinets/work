@@ -86,9 +86,9 @@
     </article>
 
     <article id="cultural-model-eval">
-      <h2>Cultural-model evaluation — open-weights fine-tuning</h2>
-      <img src="images/cultural-eval.svg" alt="Open-weights fine-tuning evaluated with locked prompts, paired answers, and blind scores." />
-      <p>A locked prompt suite is run on a baseline and on an adapted cultural model. The adapted model is an open-weights fine-tune. Answers are scored blind. The sheet is unblinded only after scoring is finished, and a second reviewer can check a sample. Weights, prompts, and the score key are not on this page.</p>
+      <h2>Cultural-model evaluation - open-weights fine-tuning</h2>
+      <img src="images/cultural-eval-ft.svg" alt="Open weights are fine-tuned, held against a frozen baseline, then scored blind." />
+      <p>A locked prompt suite is run on a baseline and on an adapted cultural model. The adapted model is an open-weights fine-tune: it starts from a public model and is adapted to the cultural task, while a frozen copy of those same weights is the baseline. Answers are scored blind. The sheet is unblinded only after scoring is finished, and a second reviewer can check a sample. The training recipe, prompts, and the score key are not on this page.</p>
     </article>
 
     <article id="bet-log">

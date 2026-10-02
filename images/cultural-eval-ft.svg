@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect width="1280" height="720" fill="#f3efe6"/>
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif" fill="#1c1814">
+    <text x="48" y="56" font-size="26" font-weight="650">Cultural-model evaluation - open-weights fine-tuning</text>
+    <text x="48" y="90" font-size="16" fill="#5e584e">Public weights are adapted. A frozen copy of those same weights is the baseline.</text>
+
+    <rect x="48" y="140" width="270" height="120" rx="8" fill="#fff" stroke="#1c1814"/>
+    <text x="183" y="184" text-anchor="middle" font-size="16" font-weight="650">Open weights</text>
+    <text x="183" y="210" text-anchor="middle" font-size="14" fill="#5e584e">Start from a public</text>
+    <text x="183" y="232" text-anchor="middle" font-size="14" fill="#5e584e">model, not a private one</text>
+
+    <rect x="352" y="140" width="290" height="120" rx="8" fill="#fff" stroke="#b8431f" stroke-width="2.5"/>
+    <text x="497" y="184" text-anchor="middle" font-size="16" font-weight="650">Fine-tune</text>
+    <text x="497" y="210" text-anchor="middle" font-size="14" fill="#b8431f">Adapt those weights</text>
+    <text x="497" y="232" text-anchor="middle" font-size="14" fill="#b8431f">to the cultural task</text>
+
+    <rect x="676" y="140" width="270" height="120" rx="8" fill="#fff" stroke="#1c1814"/>
+    <text x="811" y="184" text-anchor="middle" font-size="16" font-weight="650">Frozen baseline</text>
+    <text x="811" y="210" text-anchor="middle" font-size="14" fill="#5e584e">Same starting weights</text>
+    <text x="811" y="232" text-anchor="middle" font-size="14" fill="#5e584e">with no fine-tune</text>
+
+    <rect x="980" y="140" width="252" height="120" rx="8" fill="#1f6b4a"/>
+    <text x="1106" y="184" text-anchor="middle" font-size="16" font-weight="650" fill="#f3efe6">Blind score</text>
+    <text x="1106" y="210" text-anchor="middle" font-size="14" fill="#e4f2ea">Fine-tuned answers</text>
+    <text x="1106" y="232" text-anchor="middle" font-size="14" fill="#e4f2ea">versus the baseline</text>
+
+    <rect x="48" y="320" width="1184" height="72" rx="8" fill="#1c1814"/>
+    <text x="640" y="362" text-anchor="middle" font-size="18" fill="#f3efe6">The scorer does not see which answers came from the fine-tune. The key opens after the sheet is done.</text>
+
+    <text x="48" y="460" font-size="18">Open-weights fine-tuning is the change under test. The baseline is the untouched copy.</text>
+    <text x="48" y="496" font-size="18">The training recipe, prompts, and score key stay off this page.</text>
+  </g>
+</svg>
