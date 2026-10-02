@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
   <rect width="1280" height="720" fill="#f3efe6"/>
   <g font-family="Segoe UI, Helvetica, Arial, sans-serif" fill="#1c1814">
-    <text x="48" y="56" font-size="28" font-weight="650">Cultural-model evaluation</text>
+    <text x="48" y="56" font-size="28" font-weight="650">Cultural-model evaluation — open-weights fine-tuning</text>
     <text x="48" y="90" font-size="16" fill="#5e584e">A locked suite. Blind scores. The key stays sealed until the sheet is done.</text>
 
     <rect x="48" y="140" width="270" height="110" rx="8" fill="#fff" stroke="#1c1814"/>
