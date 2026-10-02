@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect width="1280" height="720" fill="#f3efe6"/>
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif" fill="#1c1814">
+    <text x="48" y="52" font-size="28" font-weight="650">Market data platform — feeds to a publish API</text>
+    <text x="48" y="82" font-size="16" fill="#5e584e">Listing and transaction ingest, county cleaning, pending vs closed, comps, forecast bias gate.</text>
+
+    <rect x="48" y="108" width="250" height="48" rx="8" fill="#fff" stroke="#1c1814"/>
+    <text x="173" y="138" text-anchor="middle" font-size="16">Listing feed</text>
+    <rect x="314" y="108" width="270" height="48" rx="8" fill="#fff" stroke="#1c1814"/>
+    <text x="449" y="138" text-anchor="middle" font-size="16">Transaction feed</text>
+    <rect x="600" y="108" width="270" height="48" rx="8" fill="#fff" stroke="#1c1814"/>
+    <text x="735" y="138" text-anchor="middle" font-size="16">County reference</text>
+    <rect x="886" y="108" width="346" height="48" rx="8" fill="#fff" stroke="#1c1814" stroke-dasharray="6 4"/>
+    <text x="1059" y="138" text-anchor="middle" font-size="16">Vendor adapter boundary</text>
+
+    <rect x="48" y="180" width="1184" height="52" rx="8" fill="#1c1814"/>
+    <text x="640" y="212" text-anchor="middle" font-size="18" fill="#f3efe6">Object storage — raw files immutable. Replay starts here, not from a cleaned table.</text>
+
+    <rect x="48" y="252" width="1184" height="52" rx="8" fill="#fff" stroke="#1c1814"/>
+    <text x="640" y="284" text-anchor="middle" font-size="18">Connectors — batch and incremental. Idempotent upsert on natural keys.</text>
+
+    <rect x="48" y="324" width="1184" height="52" rx="8" fill="#fff" stroke="#8a5a12"/>
+    <text x="640" y="356" text-anchor="middle" font-size="18">Quality rules — versioned. Block never enters the publish schema. Warn flags and passes.</text>
+
+    <rect x="48" y="400" width="270" height="100" rx="8" fill="#fff" stroke="#1c1814"/>
+    <text x="183" y="440" text-anchor="middle" font-size="16" font-weight="650">listings_clean</text>
+    <text x="183" y="466" text-anchor="middle" font-size="14" fill="#5e584e">County-level rules</text>
+    <text x="183" y="486" text-anchor="middle" font-size="14" fill="#5e584e">applied on write</text>
+
+    <rect x="334" y="400" width="300" height="100" rx="8" fill="#fff" stroke="#1c1814"/>
+    <text x="484" y="440" text-anchor="middle" font-size="16" font-weight="650">transactions</text>
+    <text x="484" y="466" text-anchor="middle" font-size="14" fill="#5e584e">Pending and closed, separate</text>
+    <text x="484" y="486" text-anchor="middle" font-size="14" fill="#5e584e">Different required fields</text>
+
+    <rect x="650" y="400" width="270" height="100" rx="8" fill="#fff" stroke="#1c1814"/>
+    <text x="785" y="440" text-anchor="middle" font-size="16" font-weight="650">comps view</text>
+    <text x="785" y="466" text-anchor="middle" font-size="14" fill="#5e584e">Same county</text>
+    <text x="785" y="486" text-anchor="middle" font-size="14" fill="#5e584e">Stated lookback window</text>
+
+    <rect x="936" y="400" width="296" height="100" rx="8" fill="#fff" stroke="#b8431f" stroke-width="2.5"/>
+    <text x="1084" y="436" text-anchor="middle" font-size="16" font-weight="650">forecasts</text>
+    <text x="1084" y="460" text-anchor="middle" font-size="14" fill="#5e584e">Bias gate before publish</text>
+    <text x="1084" y="480" text-anchor="middle" font-size="14" fill="#b8431f">Miss → hold region</text>
+
+    <rect x="48" y="528" width="1184" height="64" rx="8" fill="#1f6b4a"/>
+    <text x="640" y="556" text-anchor="middle" font-size="18" font-weight="650" fill="#f3efe6">Publish API — the only door for downstream tools</text>
+    <text x="640" y="578" text-anchor="middle" font-size="15" fill="#e4f2ea">Postgres is the system of record. Consumers do not get a database login.</text>
+
+    <text x="48" y="628" font-size="15" fill="#5e584e">Cloud shape: containers, secrets manager, least-privilege identity, logs and metrics, dev / staging / prod.</text>
+    <text x="48" y="656" font-size="15" fill="#5e584e">A feed vendor changes the adapter. County rules, comps, and the publish contract stay put.</text>
+  </g>
+</svg>

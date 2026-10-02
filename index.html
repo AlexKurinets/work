@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alex Kurinets — completed work</title>
+  <style>
+    :root { color-scheme: light; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+      background: #f6f4ef;
+      color: #1c1814;
+      line-height: 1.45;
+    }
+    main { max-width: 880px; margin: 0 auto; padding: 48px 20px 80px; }
+    h1 { font-size: 2rem; font-weight: 650; margin: 0 0 8px; }
+    .line { font-size: 1.05rem; margin: 0 0 12px; }
+    .note { color: #5e584e; margin: 0 0 36px; }
+    article {
+      background: #fff;
+      border: 1px solid #e4dfd4;
+      border-radius: 12px;
+      padding: 20px 20px 8px;
+      margin: 0 0 20px;
+    }
+    h2 { font-size: 1.15rem; margin: 0 0 8px; }
+    p { margin: 0 0 16px; }
+    img, object { width: 100%; height: auto; display: block; margin: 0 0 16px; background: #fff; }
+    footer { color: #5e584e; font-size: 0.9rem; margin-top: 28px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Alex Kurinets</h1>
+    <p class="line">Full-stack and cloud. Production AI, data, and risk systems.</p>
+    <p class="note">Each block is a separate project. The page shows the result or the delivery scope. It does not include data sources, implementation, or trading rules.</p>
+
+    <article>
+      <h2>Pending home sales forecast</h2>
+      <img src="images/pending-home-sales.png" alt="Predicted pending home sales plotted against the actual series, 2021 through 2026." />
+      <p>National pending home sales, predicted against the actual series, 2021 through 2026. The forecast follows the seasonal turns. The gap between the lines is the miss.</p>
+    </article>
+
+    <article>
+      <h2>Walk-forward risk score</h2>
+      <img src="images/risk-score-auc.png" alt="Out-of-sample discrimination by test year, 2009 through 2024." />
+      <p>Out-of-sample discrimination by test year, 2009 through 2024. Each bar is a year the model had not seen.</p>
+    </article>
+
+    <article>
+      <h2>Futures backtest</h2>
+      <img src="images/futures-yearly.png" alt="Yearly backtest result and trade count, 2017 through 2024." />
+      <p>Yearly result and trade count, 2017 through 2024. This is the scoreboard. The rule that produced it is not on this page.</p>
+    </article>
+
+    <article>
+      <h2>Research orchestration workspace</h2>
+      <img src="images/orchestration.jpg" alt="Workspace for research, planning, and review before an order is sent." />
+      <p>A workspace for research, planning, and review. A draft stays a draft until a person sends it on.</p>
+    </article>
+
+    <article>
+      <h2>Production decisioning system</h2>
+      <img src="images/decisioning.svg" alt="Decisioning system. The model drafts. One service is allowed to act." />
+      <p>The model drafts and classifies. One service is allowed to act. Repeated requests do not double-apply.</p>
+    </article>
+
+    <article>
+      <h2>Market data platform</h2>
+      <img src="images/market-data.svg" alt="Path from incoming feeds to a single publish door." />
+      <p>Feeds land once, checks run before publish, and downstream tools use one door. They do not get a database login.</p>
+    </article>
+
+    <article>
+      <h2>Futures research lab</h2>
+      <p>A desktop lab for minute-level futures data. Integrity is checked before a study runs. The lab does not place trades.</p>
+    </article>
+
+    <article>
+      <h2>Orchestration service</h2>
+      <p>Voice or text comes in. An execution plan goes out. Every request leaves an audit record.</p>
+    </article>
+
+    <article>
+      <h2>News coverage validation</h2>
+      <p>A validation run for full-text news coverage across countries. Each query produced a review report.</p>
+    </article>
+
+    <article>
+      <h2>Equity backtests</h2>
+      <p>Backtests across a large symbol set. Each test has its own equity curve and covers roughly a decade.</p>
+    </article>
+
+    <article>
+      <h2>Bet log pipeline</h2>
+      <p>A production pipeline that replaced a manual bet log with structured records.</p>
+    </article>
+
+    <article>
+      <h2>Live price monitor</h2>
+      <p>A monitor that watches live prices and sends an alert to an operator.</p>
+    </article>
+
+    <footer>Alex Kurinets. Results and delivery scope only.</footer>
+  </main>
+</body>
+</html>

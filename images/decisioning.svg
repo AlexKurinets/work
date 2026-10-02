@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect width="1280" height="720" fill="#f3efe6"/>
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif" fill="#1c1814">
+    <text x="48" y="52" font-size="28" font-weight="650">Decisioning stack — one store, four responsibilities</text>
+    <text x="48" y="82" font-size="16" fill="#5e584e">Models draft and classify. The execution service is the only writer of side effects.</text>
+
+    <rect x="48" y="112" width="230" height="52" rx="8" fill="#fff" stroke="#1c1814"/>
+    <text x="163" y="144" text-anchor="middle" font-size="16">Market data API</text>
+    <rect x="296" y="112" width="250" height="52" rx="8" fill="#fff" stroke="#1c1814"/>
+    <text x="421" y="144" text-anchor="middle" font-size="16">Account / broker API</text>
+    <rect x="1008" y="112" width="224" height="52" rx="8" fill="#fff" stroke="#1c1814"/>
+    <text x="1120" y="144" text-anchor="middle" font-size="16">Cloud scheduler</text>
+
+    <rect x="48" y="196" width="498" height="48" rx="8" fill="#1c1814"/>
+    <text x="297" y="226" text-anchor="middle" font-size="16" fill="#f3efe6">Adapter — rate limit, retry, backoff, dead letter</text>
+
+    <rect x="564" y="188" width="420" height="64" rx="8" fill="#fff" stroke="#b8431f" stroke-dasharray="6 4"/>
+    <text x="774" y="216" text-anchor="middle" font-size="16" font-weight="650">Model — off the write path</text>
+    <text x="774" y="238" text-anchor="middle" font-size="14" fill="#5e584e">Drafts the digest. Classifies exceptions. side_effects = false</text>
+
+    <rect x="48" y="292" width="210" height="92" rx="8" fill="#fff" stroke="#1c1814"/>
+    <text x="153" y="328" text-anchor="middle" font-size="16" font-weight="650">State agent</text>
+    <text x="153" y="352" text-anchor="middle" font-size="14" fill="#5e584e">Market + account</text>
+    <text x="153" y="372" text-anchor="middle" font-size="14" fill="#5e584e">snapshots</text>
+
+    <rect x="276" y="292" width="210" height="92" rx="8" fill="#fff" stroke="#1c1814"/>
+    <text x="381" y="328" text-anchor="middle" font-size="16" font-weight="650">Rule agent</text>
+    <text x="381" y="352" text-anchor="middle" font-size="14" fill="#5e584e">Versioned rule pack</text>
+    <text x="381" y="372" text-anchor="middle" font-size="14" fill="#5e584e">Proposes. Never acts.</text>
+
+    <rect x="504" y="292" width="250" height="92" rx="8" fill="#fff" stroke="#b8431f" stroke-width="2.5"/>
+    <text x="629" y="326" text-anchor="middle" font-size="16" font-weight="650">Execution service</text>
+    <text x="629" y="350" text-anchor="middle" font-size="14" fill="#5e584e">Only writer of side effects</text>
+    <text x="629" y="370" text-anchor="middle" font-size="14" fill="#b8431f">Kill switch fail-closed</text>
+
+    <rect x="772" y="292" width="230" height="92" rx="8" fill="#fff" stroke="#1c1814"/>
+    <text x="887" y="328" text-anchor="middle" font-size="16" font-weight="650">Exception agent</text>
+    <text x="887" y="352" text-anchor="middle" font-size="14" fill="#5e584e">Reports.</text>
+    <text x="887" y="372" text-anchor="middle" font-size="14" fill="#5e584e">Does not repair state.</text>
+
+    <rect x="1020" y="292" width="212" height="92" rx="8" fill="#1c1814"/>
+    <text x="1126" y="328" text-anchor="middle" font-size="16" font-weight="650" fill="#f3efe6">Coordinator</text>
+    <text x="1126" y="352" text-anchor="middle" font-size="14" fill="#e7d7c8">Scheduled digest</text>
+    <text x="1126" y="372" text-anchor="middle" font-size="14" fill="#e7d7c8">Immediate alert</text>
+
+    <rect x="48" y="428" width="1184" height="72" rx="8" fill="#1f6b4a"/>
+    <text x="640" y="460" text-anchor="middle" font-size="20" font-weight="650" fill="#f3efe6">PostgreSQL — single source of truth</text>
+    <text x="640" y="484" text-anchor="middle" font-size="15" fill="#e4f2ea">Every agent reads the same snapshot id. No private copy of account or market state.</text>
+
+    <text x="48" y="544" font-size="15" fill="#5e584e">Execution runs only when all three are true</text>
+    <rect x="48" y="560" width="360" height="44" rx="8" fill="#fff" stroke="#1c1814"/>
+    <text x="228" y="588" text-anchor="middle" font-size="15">Score ≥ hard threshold</text>
+    <rect x="424" y="560" width="380" height="44" rx="8" fill="#fff" stroke="#1c1814"/>
+    <text x="614" y="588" text-anchor="middle" font-size="15">Snapshot id is still current</text>
+    <rect x="820" y="560" width="412" height="44" rx="8" fill="#fff" stroke="#1c1814"/>
+    <text x="1026" y="588" text-anchor="middle" font-size="15">Kill switch is off and readable</text>
+
+    <text x="48" y="650" font-size="15" fill="#5e584e">If the model and the rule service disagree, the rule service wins. The ledger row and the audit row commit together.</text>
+  </g>
+  <g stroke="#1c1814" fill="none" stroke-width="1.4">
+    <path d="M163 164 V196"/>
+    <path d="M421 164 V196"/>
+    <path d="M1120 164 V292"/>
+    <path d="M153 244 V292"/>
+    <path d="M381 244 V292"/>
+    <polyline points="153,384 153,428"/>
+    <polyline points="381,384 381,428"/>
+    <polyline points="629,384 629,428"/>
+    <polyline points="887,384 887,428"/>
+    <polyline points="1126,384 1126,428"/>
+  </g>
+</svg>
