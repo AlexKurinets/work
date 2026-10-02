@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect width="1280" height="720" fill="#f3efe6"/>
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif" fill="#1c1814">
+    <text x="48" y="56" font-size="28" font-weight="650">Bet-log ingestion and a sequence model</text>
+    <text x="48" y="90" font-size="16" fill="#5e584e">Rows go in. A sequence model trains. Inference writes a score. The betting rule stays off this page.</text>
+
+    <rect x="48" y="150" width="270" height="120" rx="8" fill="#fff" stroke="#1c1814"/>
+    <text x="183" y="198" text-anchor="middle" font-size="16" font-weight="650">Ingest the bet log</text>
+    <text x="183" y="224" text-anchor="middle" font-size="14" fill="#5e584e">Structured rows replace</text>
+    <text x="183" y="246" text-anchor="middle" font-size="14" fill="#5e584e">the manual log</text>
+
+    <rect x="360" y="150" width="270" height="120" rx="8" fill="#fff" stroke="#1c1814"/>
+    <text x="495" y="198" text-anchor="middle" font-size="16" font-weight="650">Sequence</text>
+    <text x="495" y="224" text-anchor="middle" font-size="14" fill="#5e584e">Past bets, in order,</text>
+    <text x="495" y="246" text-anchor="middle" font-size="14" fill="#5e584e">per account</text>
+
+    <rect x="672" y="150" width="270" height="120" rx="8" fill="#fff" stroke="#b8431f" stroke-width="2.5"/>
+    <text x="807" y="198" text-anchor="middle" font-size="16" font-weight="650">Train</text>
+    <text x="807" y="224" text-anchor="middle" font-size="14" fill="#5e584e">A sequence model</text>
+    <text x="807" y="246" text-anchor="middle" font-size="14" fill="#b8431f">learns from those rows</text>
+
+    <rect x="984" y="150" width="248" height="120" rx="8" fill="#1f6b4a"/>
+    <text x="1108" y="198" text-anchor="middle" font-size="16" font-weight="650" fill="#f3efe6">Infer</text>
+    <text x="1108" y="224" text-anchor="middle" font-size="14" fill="#e4f2ea">A score for the</text>
+    <text x="1108" y="246" text-anchor="middle" font-size="14" fill="#e4f2ea">next outcome</text>
+
+    <rect x="48" y="340" width="1184" height="72" rx="8" fill="#1c1814"/>
+    <text x="640" y="382" text-anchor="middle" font-size="18" fill="#f3efe6">Training and inference are separate runs. Inference reads a finished model.</text>
+
+    <text x="48" y="480" font-size="18">The pipeline is ingest, then sequence, then train, then score.</text>
+    <text x="48" y="516" font-size="18">Features, targets, and thresholds stay off this page.</text>
+  </g>
+</svg>

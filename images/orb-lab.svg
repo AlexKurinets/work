@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect width="1280" height="720" fill="#f3efe6"/>
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif" fill="#1c1814">
+    <text x="48" y="56" font-size="28" font-weight="650">Equity-index futures — opening-range study</text>
+    <text x="48" y="90" font-size="16" fill="#5e584e">Nasdaq and S&amp;P, standard and micro. The lab records the study. It does not send orders.</text>
+
+    <rect x="48" y="140" width="270" height="88" rx="8" fill="#fff" stroke="#1c1814"/>
+    <text x="183" y="174" text-anchor="middle" font-size="16" font-weight="650">Nasdaq futures</text>
+    <text x="183" y="198" text-anchor="middle" font-size="14" fill="#5e584e">Standard and micro</text>
+
+    <rect x="352" y="140" width="270" height="88" rx="8" fill="#fff" stroke="#1c1814"/>
+    <text x="487" y="174" text-anchor="middle" font-size="16" font-weight="650">S&amp;P futures</text>
+    <text x="487" y="198" text-anchor="middle" font-size="14" fill="#5e584e">Standard and micro</text>
+
+    <rect x="656" y="140" width="576" height="88" rx="8" fill="#fff" stroke="#1c1814" stroke-dasharray="6 4"/>
+    <text x="944" y="174" text-anchor="middle" font-size="16" font-weight="650">Minute bars in</text>
+    <text x="944" y="198" text-anchor="middle" font-size="14" fill="#5e584e">Integrity checked before a study runs</text>
+
+    <rect x="48" y="280" width="270" height="100" rx="8" fill="#1c1814"/>
+    <text x="183" y="322" text-anchor="middle" font-size="16" font-weight="650" fill="#f3efe6">Session open</text>
+    <text x="183" y="348" text-anchor="middle" font-size="14" fill="#f3efe6">The range starts here</text>
+
+    <rect x="352" y="280" width="300" height="100" rx="8" fill="#fff" stroke="#1c1814"/>
+    <text x="502" y="322" text-anchor="middle" font-size="16" font-weight="650">Opening range</text>
+    <text x="502" y="348" text-anchor="middle" font-size="14" fill="#5e584e">Marked, then left alone</text>
+
+    <rect x="686" y="280" width="270" height="100" rx="8" fill="#fff" stroke="#b8431f" stroke-width="2.5"/>
+    <text x="821" y="322" text-anchor="middle" font-size="16" font-weight="650">Break of the range</text>
+    <text x="821" y="348" text-anchor="middle" font-size="14" fill="#b8431f">That is the signal</text>
+
+    <rect x="990" y="280" width="242" height="100" rx="8" fill="#1f6b4a"/>
+    <text x="1111" y="322" text-anchor="middle" font-size="16" font-weight="650" fill="#f3efe6">Study result</text>
+    <text x="1111" y="348" text-anchor="middle" font-size="14" fill="#e4f2ea">No order is sent</text>
+
+    <text x="48" y="460" font-size="18">The algorithm is an opening-range breakout study on those four contracts.</text>
+    <text x="48" y="496" font-size="18">A break above or below the marked range is the event the study keeps.</text>
+    <text x="48" y="532" font-size="18">Entry, stop, and size stay off this page. The lab does not place trades.</text>
+  </g>
+</svg>

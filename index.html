@@ -43,38 +43,39 @@
     </article>
 
     <article>
-      <h2>Walk-forward risk score</h2>
-      <img src="images/risk-score-auc.png" alt="Out-of-sample discrimination by test year, 2009 through 2024." />
-      <p>Out-of-sample discrimination by test year, 2009 through 2024. Each bar is a year the model had not seen.</p>
+      <h2>CAM recovery likelihood</h2>
+      <img src="images/risk-score-auc.png" alt="Walk-forward score for the likelihood of a CAM recovery, by test year." />
+      <p>This is a walk-forward score for the likelihood of a CAM recovery. Each bar is one test year, 2009 through 2024, and that year was not in the training window. A taller bar means the score separated recoveries from non-recoveries more cleanly in that year.</p>
     </article>
 
     <article>
-      <h2>Futures backtest</h2>
-      <img src="images/futures-yearly.png" alt="Yearly backtest result and trade count, 2017 through 2024." />
-      <p>Yearly result and trade count, 2017 through 2024. This is the scoreboard. The rule that produced it is not on this page.</p>
+      <h2>Gold futures backtest</h2>
+      <img src="images/futures-yearly.png" alt="Yearly result and trade count for a gold futures backtest, 2017 through 2024." />
+      <p>Commodity futures, gold. The bars are the yearly result and the line is the trade count, 2017 through 2024. This is the scoreboard. The rule that produced it is not on this page.</p>
     </article>
 
     <article>
-      <h2>Research orchestration workspace</h2>
-      <img src="images/orchestration.jpg" alt="Workspace for research, planning, and review before an order is sent." />
-      <p>A workspace for research, planning, and review. A draft stays a draft until a person sends it on.</p>
+      <h2>Trade-indicator orchestration</h2>
+      <img src="images/trade-indicators.svg" alt="Orchestration workflow for a trade-indicator solution. A person sends the action." />
+      <p>An orchestration workflow for a trade-indicator solution. Indicator readings are researched and planned, a risk gate stays on, and a draft is prepared. A person sends the action. The workflow does not.</p>
     </article>
 
     <article>
-      <h2>Production decisioning system</h2>
-      <img src="images/decisioning.svg" alt="Decisioning system. The model drafts. One service is allowed to act." />
-      <p>The model drafts and classifies. One service is allowed to act. Repeated requests do not double-apply.</p>
+      <h2>Trading algo decisioning</h2>
+      <img src="images/decisioning.svg" alt="Decisioning system for a trading algorithm that acts when a threshold is breached." />
+      <p>This decisioning system serves a trading algorithm. When a predefined threshold is breached, the snapshot is still current, and the kill switch is off, the execution service fires the action. The model drafts and classifies. It does not fire.</p>
     </article>
 
     <article>
-      <h2>Market data platform</h2>
-      <img src="images/market-data.svg" alt="Path from incoming feeds to a single publish door." />
-      <p>Feeds land once, checks run before publish, and downstream tools use one door. They do not get a database login.</p>
+      <h2>Real estate development platform</h2>
+      <img src="images/market-data.svg" alt="Real estate platform. Feeds, checks, comps, and a gated forecast." />
+      <p>A real estate development platform. The agentic harness does three jobs: it ingests listing and transaction feeds, it keeps pending and closed apart and forms comps, and it writes a property summary while holding any forecast that fails its check. Downstream tools use one publish door.</p>
     </article>
 
     <article>
-      <h2>Futures research lab</h2>
-      <p>A desktop lab for minute-level futures data. Integrity is checked before a study runs. The lab does not place trades.</p>
+      <h2>Equity-index futures research lab</h2>
+      <img src="images/orb-lab.svg" alt="Opening-range study on Nasdaq and S&amp;P futures, standard and micro." />
+      <p>This is the futures research lab. The contracts are equity-index futures: Nasdaq and S&amp;P, each in a standard and a micro size. The algorithm marks the opening range, and a break of that range is the signal the study keeps. Entry, stop, and size are not on this page. The lab does not place trades.</p>
     </article>
 
     <article>
@@ -83,8 +84,9 @@
     </article>
 
     <article>
-      <h2>News coverage validation</h2>
-      <p>A validation run for full-text news coverage across countries. Each query produced a review report.</p>
+      <h2>News ingestion, clustering, and summaries</h2>
+      <img src="images/news-flow.svg" alt="Articles are ingested, clustered, merged, and then summarized." />
+      <p>Articles are ingested, grouped into story clusters, and merged when two clusters are the same story. One summary is written for the merged cluster, and a person can review the cluster and the summary. Similarity cutoffs, sources, and the summary prompt are not on this page.</p>
     </article>
 
     <article>
@@ -93,8 +95,9 @@
     </article>
 
     <article>
-      <h2>Bet log pipeline</h2>
-      <p>A production pipeline that replaced a manual bet log with structured records.</p>
+      <h2>Bet-log ingestion and sequence model</h2>
+      <img src="images/bet-log-model.svg" alt="Bet log rows are ingested, sequenced, used to train a model, then scored." />
+      <p>The bet log is ingested as structured rows, replacing the manual log. Past bets are kept in order per account. A sequence model trains on those rows, and a separate inference run writes a score for the next outcome. Features, targets, and thresholds are not on this page.</p>
     </article>
 
     <article>

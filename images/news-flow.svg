@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect width="1280" height="720" fill="#f3efe6"/>
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif" fill="#1c1814">
+    <text x="48" y="56" font-size="28" font-weight="650">News ingestion, clustering, and summaries</text>
+    <text x="48" y="90" font-size="16" fill="#5e584e">Articles become story groups. Each finished group gets one summary.</text>
+
+    <rect x="48" y="150" width="250" height="120" rx="8" fill="#fff" stroke="#1c1814"/>
+    <text x="173" y="198" text-anchor="middle" font-size="16" font-weight="650">Ingest</text>
+    <text x="173" y="224" text-anchor="middle" font-size="14" fill="#5e584e">Articles arrive</text>
+    <text x="173" y="246" text-anchor="middle" font-size="14" fill="#5e584e">Blocked sources stay out</text>
+
+    <rect x="352" y="150" width="270" height="120" rx="8" fill="#fff" stroke="#1c1814"/>
+    <text x="487" y="198" text-anchor="middle" font-size="16" font-weight="650">Cluster</text>
+    <text x="487" y="224" text-anchor="middle" font-size="14" fill="#5e584e">Same story, one group</text>
+    <text x="487" y="246" text-anchor="middle" font-size="14" fill="#5e584e">Different stories stay apart</text>
+
+    <rect x="676" y="150" width="270" height="120" rx="8" fill="#fff" stroke="#b8431f" stroke-width="2.5"/>
+    <text x="811" y="198" text-anchor="middle" font-size="16" font-weight="650">Merge clusters</text>
+    <text x="811" y="224" text-anchor="middle" font-size="14" fill="#5e584e">Groups of the same story</text>
+    <text x="811" y="246" text-anchor="middle" font-size="14" fill="#b8431f">collapse into one</text>
+
+    <rect x="1000" y="150" width="232" height="120" rx="8" fill="#1f6b4a"/>
+    <text x="1116" y="198" text-anchor="middle" font-size="16" font-weight="650" fill="#f3efe6">One summary</text>
+    <text x="1116" y="224" text-anchor="middle" font-size="14" fill="#e4f2ea">Written for the</text>
+    <text x="1116" y="246" text-anchor="middle" font-size="14" fill="#e4f2ea">merged cluster</text>
+
+    <rect x="48" y="340" width="1184" height="72" rx="8" fill="#1c1814"/>
+    <text x="640" y="382" text-anchor="middle" font-size="18" fill="#f3efe6">A person can review the cluster and the summary before either is treated as final</text>
+
+    <text x="48" y="480" font-size="18">The shape is the proof: ingest, cluster, merge, summarize.</text>
+    <text x="48" y="516" font-size="18">Similarity cutoffs, sources, and the summary prompt stay off this page.</text>
+  </g>
+</svg>
