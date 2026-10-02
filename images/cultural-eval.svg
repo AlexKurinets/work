@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect width="1280" height="720" fill="#f3efe6"/>
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif" fill="#1c1814">
+    <text x="48" y="56" font-size="28" font-weight="650">Cultural-model evaluation</text>
+    <text x="48" y="90" font-size="16" fill="#5e584e">A locked suite. Blind scores. The key stays sealed until the sheet is done.</text>
+
+    <rect x="48" y="140" width="270" height="110" rx="8" fill="#fff" stroke="#1c1814"/>
+    <text x="183" y="186" text-anchor="middle" font-size="16" font-weight="650">Locked prompts</text>
+    <text x="183" y="212" text-anchor="middle" font-size="14" fill="#5e584e">Same items for every run</text>
+
+    <rect x="352" y="140" width="270" height="110" rx="8" fill="#fff" stroke="#1c1814"/>
+    <text x="487" y="186" text-anchor="middle" font-size="16" font-weight="650">Two answer sets</text>
+    <text x="487" y="212" text-anchor="middle" font-size="14" fill="#5e584e">Baseline and adapted</text>
+
+    <rect x="656" y="140" width="270" height="110" rx="8" fill="#fff" stroke="#b8431f" stroke-width="2.5"/>
+    <text x="791" y="186" text-anchor="middle" font-size="16" font-weight="650">Blind score</text>
+    <text x="791" y="212" text-anchor="middle" font-size="14" fill="#b8431f">The scorer does not</text>
+    <text x="791" y="234" text-anchor="middle" font-size="14" fill="#b8431f">see which set is which</text>
+
+    <rect x="960" y="140" width="272" height="110" rx="8" fill="#1f6b4a"/>
+    <text x="1096" y="186" text-anchor="middle" font-size="16" font-weight="650" fill="#f3efe6">Unblind</text>
+    <text x="1096" y="212" text-anchor="middle" font-size="14" fill="#e4f2ea">Only after the sheet</text>
+    <text x="1096" y="234" text-anchor="middle" font-size="14" fill="#e4f2ea">is complete</text>
+
+    <rect x="48" y="310" width="1184" height="72" rx="8" fill="#1c1814"/>
+    <text x="640" y="352" text-anchor="middle" font-size="18" fill="#f3efe6">A second reviewer can rescore a sample. Disagreement stays visible.</text>
+
+    <text x="48" y="450" font-size="18">The proof is the harness: locked items, paired answers, blind scores, then the key.</text>
+    <text x="48" y="486" font-size="18">Weights, prompts, and the score key stay off this page.</text>
+  </g>
+</svg>
