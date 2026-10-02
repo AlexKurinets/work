@@ -26,6 +26,7 @@
       scroll-margin-top: 16px;
     }
     h2 { font-size: 1.15rem; margin: 0 0 8px; }
+    h3 { font-size: 0.95rem; margin: 4px 0 8px; letter-spacing: 0.02em; }
     p { margin: 0 0 16px; }
     img, object { width: 100%; height: auto; display: block; margin: 0 0 16px; background: #fff; }
     footer { color: #5e584e; font-size: 0.9rem; margin-top: 28px; }
@@ -35,66 +36,96 @@
   <main>
     <h1>Alex Kurinets</h1>
     <p class="line">Full-stack and cloud. Production AI, data, and risk systems.</p>
-    <p class="note">Each block is a separate project. The page shows the result or the delivery scope. It does not include data sources, implementation, or trading rules.</p>
+    <p class="note">Each block is a case study. The figure is the cover. The text is the scope of the work. Data sources, implementation, and trading rules stay off this page.</p>
 
     <article id="pending-home-sales">
       <h2>Pending home sales forecast</h2>
       <img src="images/pending-home-sales.png" alt="Predicted pending home sales plotted against the actual series, 2021 through 2026." />
       <p>National pending home sales, predicted against the actual series, 2021 through 2026. The forecast follows the seasonal turns. The gap between the lines is the miss.</p>
+      <h3>Case study</h3>
+      <p>The job was a production forecast of national pending home sales. Each month the model writes a prediction before the actual count is known. The chart is the scoreboard after the fact: predicted against actual, from 2021 through 2026.</p>
+      <p>The seasonal turns are in both lines. Where the lines separate, the forecast missed, and the miss stays on the chart. The page does not name the inputs or the fitting procedure.</p>
     </article>
 
     <article id="cam-recovery">
       <h2>CAM recovery likelihood</h2>
       <img src="images/risk-score-auc.png" alt="Walk-forward score for the likelihood of a CAM recovery, by test year." />
       <p>This is a walk-forward score for the likelihood of a CAM recovery. Each bar is one test year, 2009 through 2024, and that year was not in the training window. A taller bar means the score separated recoveries from non-recoveries more cleanly in that year.</p>
+      <h3>Case study</h3>
+      <p>The setting is commercial real estate. The question each year is which locations are more likely to recover common-area charges. The score is fit on earlier years and then judged on a year it has not seen.</p>
+      <p>The bars run from 2009 through 2024. A taller bar is a year when recoveries and non-recoveries were easier to tell apart. The features and the cutoff used in production are not on this page.</p>
     </article>
 
     <article id="gold-futures">
       <h2>Gold futures backtest</h2>
       <img src="images/futures-yearly.png" alt="Yearly result and trade count for a gold futures backtest, 2017 through 2024." />
       <p>Commodity futures, gold. The bars are the yearly result and the line is the trade count, 2017 through 2024. This is the scoreboard. The rule that produced it is not on this page.</p>
+      <h3>Case study</h3>
+      <p>This is a backtest of a gold-futures rule, marked to market by year from 2017 through 2024. The bars are net result. The line is how many trades that year contained. Profitable years and losing years are both on the chart.</p>
+      <p>The chart is the scoreboard a reviewer can check. The entry, the exit, and the position size are not on this page.</p>
     </article>
 
     <article id="trade-indicators">
       <h2>Trade-indicator orchestration</h2>
       <img src="images/trade-indicators.svg" alt="Orchestration workflow for a trade-indicator solution. A person sends the action." />
       <p>An orchestration workflow for a trade-indicator solution. Indicator readings are researched and planned, a risk gate stays on, and a draft is prepared. A person sends the action. The workflow does not.</p>
+      <h3>Case study</h3>
+      <p>Indicator readings come in. The workflow gathers context, writes a plan, and checks a risk gate that stays on. A failed check stops the draft. A draft is not an order.</p>
+      <p>A person sends the action. Nothing in the workflow transmits an order on its own. The indicator formulas are not on this page.</p>
     </article>
 
     <article id="trading-decisioning">
       <h2>Trading algo decisioning</h2>
       <img src="images/decisioning.svg" alt="Decisioning system for a trading algorithm that acts when a threshold is breached." />
       <p>This decisioning system serves a trading algorithm. When a predefined threshold is breached, the snapshot is still current, and the kill switch is off, the execution service fires the action. The model drafts and classifies. It does not fire.</p>
+      <h3>Case study</h3>
+      <p>The system serves a trading algorithm. The model drafts and classifies. It is off the write path. One execution service is allowed to act, and only when three checks are true: the score clears a hard threshold, the snapshot is still current, and the kill switch is off and readable.</p>
+      <p>If the model and the rule service disagree, the rule service wins. A repeated request does not double-apply. Account and market state are not copied into the draft.</p>
     </article>
 
     <article id="real-estate">
       <h2>Real estate development platform</h2>
       <img src="images/market-data.svg" alt="Real estate platform. Feeds, checks, comps, and a gated forecast." />
       <p>A real estate development platform. The agentic harness does three jobs: it ingests listing and transaction feeds, it keeps pending and closed apart and forms comps, and it writes a property summary while holding any forecast that fails its check. Downstream tools use one publish door.</p>
+      <h3>Case study</h3>
+      <p>Listing and transaction feeds land once, as raw files that are not overwritten. Checks run before anything reaches the publish schema. Pending and closed records stay separate. Comps are built inside one county. A forecast that fails its check is held instead of published.</p>
+      <p>Downstream tools read one publish door. They do not get a database login. Feed vendors, county-rule text, and the check thresholds are not on this page.</p>
     </article>
 
     <article id="equity-index-futures">
       <h2>Equity-index futures research lab</h2>
       <img src="images/orb-lab.svg" alt="Opening-range study on Nasdaq and S&amp;P futures, standard and micro." />
       <p>This is the futures research lab. The contracts are equity-index futures: Nasdaq and S&amp;P, each in a standard and a micro size. The algorithm marks the opening range, and a break of that range is the signal the study keeps. Entry, stop, and size are not on this page. The lab does not place trades.</p>
+      <h3>Case study</h3>
+      <p>The lab studies equity-index futures: Nasdaq and S&amp;P, standard and micro. Minute bars are checked for integrity before a study runs. The study marks the opening range of the session. A break of that range is the event it keeps.</p>
+      <p>The lab records the study. It does not send orders. Entry, stop, and size are not on this page.</p>
     </article>
 
     <article id="news-ingestion">
       <h2>News ingestion, clustering, and summaries</h2>
       <img src="images/news-flow.svg" alt="Articles are ingested, clustered, merged, and then summarized." />
       <p>Articles are ingested, grouped into story clusters, and merged when two clusters are the same story. One summary is written for the merged cluster, and a person can review the cluster and the summary. Similarity cutoffs, sources, and the summary prompt are not on this page.</p>
+      <h3>Case study</h3>
+      <p>Articles arrive and blocked sources stay out. Items that are the same story form one cluster. Clusters that later turn out to be the same story are merged. One summary is written for the merged cluster.</p>
+      <p>A person can review the cluster and the summary before either is treated as final. Similarity cutoffs, source names, and the summary prompt are not on this page.</p>
     </article>
 
     <article id="cultural-model-eval">
       <h2>Cultural-model evaluation - open-weights fine-tuning</h2>
       <img src="images/cultural-eval-ft.svg" alt="Open weights are fine-tuned, held against a frozen baseline, then scored blind." />
       <p>A locked prompt suite is run on a baseline and on an adapted cultural model. The adapted model is an open-weights fine-tune: it starts from a public model and is adapted to the cultural task, while a frozen copy of those same weights is the baseline. Answers are scored blind. The sheet is unblinded only after scoring is finished, and a second reviewer can check a sample. The training recipe, prompts, and the score key are not on this page.</p>
+      <h3>Case study</h3>
+      <p>The change under test is an open-weights fine-tune. It starts from a public model and is adapted to a cultural task. A frozen copy of those same starting weights is the baseline, with no fine-tune applied. Both sides answer the same locked prompt suite.</p>
+      <p>Scoring is blind. The scorer does not see which answers came from the fine-tune. The key opens only after the sheet is done, and a second reviewer can rescore a sample. The training recipe, the prompts, and the score key are not on this page.</p>
     </article>
 
     <article id="bet-log">
       <h2>Bet-log ingestion and sequence model</h2>
       <img src="images/bet-log-model.svg" alt="Bet log rows are ingested, sequenced, used to train a model, then scored." />
       <p>The bet log is ingested as structured rows, replacing the manual log. Past bets are kept in order per account. A sequence model trains on those rows, and a separate inference run writes a score for the next outcome. Features, targets, and thresholds are not on this page.</p>
+      <h3>Case study</h3>
+      <p>A manual bet log was replaced with structured rows. Past bets stay in order, per account. A sequence model trains on those rows. Training and inference are separate runs. Inference reads a finished model and writes a score for the next outcome.</p>
+      <p>The figure is the shape of that pipeline. Features, targets, and thresholds are not on this page.</p>
     </article>
 
     <footer>Alex Kurinets. Results and delivery scope only.</footer>
